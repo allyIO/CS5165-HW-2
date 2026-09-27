@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> {{ user['username'] }} Profile </title>
+</head>
+<body>
+	<p>Username: {{ user['username'] }} </p>
+	<p>Password: {{ user['password'] }} </p>
+	<p>First name: {{ user['firstname'] }} </p>
+	<p>Last name: {{ user['lastname'] }} </p>
+	<p>Email: {{ user['email'] }} </p>
+	<p>Address: {{ user['address'] }} </p>
+	<p>Word count: {{ word_count }}</p>
+	<a href="{{ url_for('download', username=user['username']) }}">
+		<button type="button">Download file</button>
+	</a>
+	<a href="../log-in">
+		<button type="button">Log in</button>
+	</a>
+</body>
+
+</html>
